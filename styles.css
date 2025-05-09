@@ -1,0 +1,286 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: ;
+	box-sizing: border-box;
+}
+
+.container {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+
+.section {
+	display: flex;
+	height: 100vh;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	color: #fff;
+	background: #eacda3;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	scroll-snap-align: start;
+}
+
+.section h2 {
+	font-weight: 600;
+	font-size: 8vw;
+	max-width: 1042px;
+}
+
+.section p {
+	font-size: 3vw;
+	max-width: 1042px;
+}
+
+article {
+	position: relative;
+}
+
+article .cpe-student {
+	position: absolute;
+}
+
+.one .study-webdev{
+	color: #1a1a1a;
+	animation: wd-animate 3s linear infinite;
+}
+
+@keyframes wd-animate {
+	0% { opacity: 0; }
+	40% { opacity: 0; }
+	50% { opacity: 1; }
+	75% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+.one .cpe-student{
+	color: #1a1a1a;
+	animation: cpe-animate 3s linear infinite;
+}
+
+@keyframes cpe-animate {
+	0% { opacity: 1; }
+	25% { opacity: 1; }
+	50% { opacity: 0; }
+	90% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+
+header {
+	position: absolute;
+	padding-top: 30px;
+	padding-left: 60px;
+	padding-right: 60px;
+	z-index: 3;
+}
+
+a {
+	text-decoration: none;
+	color: #1F140A;
+}
+
+
+
+.proj a {
+	border-bottom-color: black;
+}
+.project .tags {
+	color: #6F4625;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+/*From previous html & CSS codes*/
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	font-weight: bold;
+	width: 100%;
+	row-gap: 10px;
+	margin-top: 35px;
+}
+
+
+/*GRID within Flexbox CSS*/
+.grid-left {
+	position: fixed;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-color: #ffffff;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	padding-top: 1vh;	
+	padding-bottom:1vh;
+	border-radius: 70px;
+	column-gap: 1px;
+
+}
+
+.grid-right {
+    position: fixed;
+    right: 60px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	background-color: #ffffff;
+	align-content: center;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 20px;
+	padding-right: 20px;
+	align-content: center;
+	border-radius: 40px;
+	column-gap: 1px;
+}
+
+/*grid items in header*/
+.item {
+	margin: auto;
+	padding: 15px 15px;
+	border-radius: 40px;
+	color: black;
+}
+.sm-icon {
+	padding: 10px 20px;
+}
+
+.mail-icon {
+	padding: 9px 15px;
+}
+
+/*HOVERS*/
+.sm-icon:hover,
+.projects:hover,
+.about:hover,
+.resume:hover,
+.mail-icon:hover {
+	background-color: #efd1a8;
+}
+ 
+
+/*Continue*/
+.project h2{
+	text-align: center;	
+	margin-bottom: 50px;
+	color: #1a1a1a;
+	left: 60%;
+}
+
+
+.two .project {
+	justify-content: center;
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+	padding: 30px;
+	border-top-left-radius: 35px;
+	border-top-right-radius: 35px;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	transform: translateY(25%);
+	background: #ECE9E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	text-align: center;
+	height:  65%;
+}
+
+.project div {
+	justify-content: left;
+	align-self: stretch;
+}
+
+
+.two .proj {
+	margin: 20px 0;
+}
+
+/*Responsiveness*/
+@media screen and (max-width: 640px) {
+
+	.header{
+		/*property: value*/
+		display: none;
+	}
+
+	.p-two img {
+		width: 30%;
+		height: 50%;
+	}
+}
+
+/*Projects Page CSS*/
+.p-one {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-self: center;
+}
+.p-one h2 {
+	font-size: 4vw;
+	padding-left: 200px;
+}
+.p-one p {
+	font-size: 2vw;
+	padding-left: 200px;
+	margin-top: 10px;
+}
+.vacs a:hover {
+	color: white;
+}
+
+.p-two {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-self: center;
+}
+
+.p-two h2 {
+	font-size: 4vw;
+	padding-left: 200px;
+}
+
+.p-two p {
+	font-size: 2vw;
+	padding-left: 200px;
+	margin-top: 10px;
+}
+.care a:hover {
+	color: white;
+}
+
+.btn {
+	position: absolute;
+	cursor: pointer; 
+    border: 1px solid #3498db; 
+    background-color: transparent; 
+    color: #1a1a1a; 
+    font-size: 1vw; 
+    border: none;
+    top: 40px;
+    left: 50px;
+}
+.btn:hover {
+	color: white;
+}
+
+/*FOOTERR CSS*/ 
+.footer p{	
+    text-align: center;	
+    margin: 20px 10px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 20px; 
+    color: #1a1a1a; 
+}
+
+article .fb:hover {
+	color: blue;
+}
